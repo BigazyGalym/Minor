@@ -1,0 +1,136 @@
+/* Тарифтер бөлімі */
+.tarrifs-page {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+.tarrifs-page h1 {
+    font-size: 4em;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: title-fade 2s ease-in-out;
+}
+
+/* Тарифтердің әрқайсысы */
+.tarrifs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Әр тариф үшін стиль */
+.tarrif-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 25px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    animation: show-item 1s forwards, fade-in-out 3s infinite alternate;
+}
+
+/* Ховер эффектісі */
+.tarrif-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Тариф атауы */
+.tarrif-item h2 {
+    font-size: 2.5em;
+    color: #16a085;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Тариф сипаттамасы */
+.tarrif-item p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Баға */
+.tarrif-item .price {
+    font-size: 2.8em;
+    color: #e67e22;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Батырма */
+.tarrif-item .btn {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.tarrif-item .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Анимация */
+@keyframes title-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes show-item {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Тарифтердің өшіп-жанып тұру анимациясы */
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Акция стиліндегі белгі */
+.tarrif-item .sale-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transform: rotate(-15deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

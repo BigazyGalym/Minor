@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Забронировать - PS Клубы</title>
+    <link rel="stylesheet" href="Bron.css">
+</head>
+<body>
+
+    <div class="booking-container">
+        <h2>Забронировать</h2>
+        
+        <!-- Байланыс ақпараттары -->
+        <div class="contact-info">
+            <h3>PS Клубымен байланыс</h3>
+            <p>PS клубының иесімен немесе әкімшісімен байланысу үшін төмендегі мәліметтерді қолдана аласыз:</p>
+            <ul>
+                <li>Телефон: <a href="tel:+77771234567">+7 777 123 45 67</a></li>
+                <li>Email: <a href="mailto:info@psclub.kz">info@psclub.kz</a></li>
+                <li>Әлеуметтік желілер:
+                    <a href="https://www.instagram.com/psclub" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram" class="instagram-logo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Брондау формасы -->
+        <form action="#" method="POST" class="booking-form">
+            <div class="form-group">
+                <label for="name">Аты-жөніңіз:</label>
+                <input type="text" id="name" name="name" required placeholder="Атыңызды енгізіңіз">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Email енгізіңіз">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Телефон нөміріңізді енгізіңіз">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Брондау күні:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Уақыты:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Қосымша ақпарат:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Қосымша ақпаратты осында жазыңыз..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Жіберу</button>
+        </form>
+    </div>
+
+</body>
+</html>
